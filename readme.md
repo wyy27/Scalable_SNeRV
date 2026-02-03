@@ -65,9 +65,9 @@ dataset_name=Bosphorus
 output=~/Models/UVG_3layer_60fps/
 train_cfg=$(cat "cfgs/train/snerv.txt")
 model_cfg=$(cat "cfgs/models/uvg-snerv-l.txt")
-CUDA_VISIBLE_DEVICES=1 nohup accelerate launch --main_process_port 29631 --mixed_precision=fp16 --dynamo_backend=inductor snerv_main.py \
+accelerate launch --main_process_port 29631 --mixed_precision=fp16 --dynamo_backend=inductor snerv_main.py \
   --dataset ${dataset_dir} --dataset-name ${dataset_name} --output ${output} \
-  ${train_cfg} ${model_cfg} --batch-size 30 --grad-accum 1 --seed 0 > ./log/Bosphorus_l.log &
+  ${train_cfg} ${model_cfg} --batch-size 30 --grad-accum 1 --seed 0
 ```
 
 ## Inference (Decoding)
@@ -78,10 +78,10 @@ output=~/Models/UVG_3layer_60fps/
 train_cfg=$(cat "cfgs/train/snerv.txt")
 model_cfg=$(cat "cfgs/models/uvg-snerv-s.txt")
 checkpoint_path=~/Models/UVG_3layer_60fps/Bosphorus-SNeRV-20260126-124211-fca8d171
-CUDA_VISIBLE_DEVICES=1 nohup accelerate launch --mixed_precision=fp16 --dynamo_backend=inductor snerv_main.py \
+accelerate launch --mixed_precision=fp16 --dynamo_backend=inductor snerv_main.py \
   --dataset ${dataset_dir} --dataset-name ${dataset_name} --output ${output} \
   ${train_cfg} ${model_cfg} --batch-size 144 --eval-batch-size 1 --grad-accum 1 --log-eval true --seed 0 \
-  --bitstream ${checkpoint_path} --bitstream-q 6 --eval-only > ./log/eval_Bosphorus_s.log &
+  --bitstream ${checkpoint_path} --bitstream-q 6 --eval-only
 ```
 
 Notes:
