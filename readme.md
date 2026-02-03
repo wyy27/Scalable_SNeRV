@@ -12,7 +12,6 @@ pip install -r requirements.txt
 ```
 
 ## Environment
-- Python: 3.8–3.11 recommended
 - PyTorch: 2.1.0 (see [requirements.txt](requirements.txt))
 - Optional: [FFmpeg](https://www.ffmpeg.org/) for dataset preparation
 
