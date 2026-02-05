@@ -1,6 +1,6 @@
 # SNeRV
 
-This repository accompanies the paper "SNeRV: Scalable Neural Representations for Video Coding" (Compression Workshop @ NeurIPS 2024).
+This repository accompanies the paper "**SNeRV: Scalable Neural Representations for Video Coding**" (Workshop on Machine Learning and Compression @ NeurIPS 2024).
 
 [Paper](https://openreview.net/forum?id=ZqN4bnXSSY&referrer=%5Bthe%20profile%20of%20Yiying%20Wei%5D(%2Fprofile%3Fid%3D~Yiying_Wei1))   |   [Poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202024/98211.png?t=1733609293.4857748)
 
