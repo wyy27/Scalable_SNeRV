@@ -1,4 +1,4 @@
-# SNeRV
+# SNeRV: Scalable Neural Representations for Video Coding
 
 This repository accompanies the paper "**SNeRV: Scalable Neural Representations for Video Coding**" (Workshop on Machine Learning and Compression @ NeurIPS 2024).
 
